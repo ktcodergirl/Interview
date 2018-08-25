@@ -33,7 +33,7 @@ public class PermutatonString {
         return String.valueOf(charArray);
     }
 
-    public static void permuteHelper(String input, int left, int right, List<String> output) {
+    public void permuteHelper(String input, int left, int right, List<String> output) {
 
         if (left == right) {
             output.add(input);
