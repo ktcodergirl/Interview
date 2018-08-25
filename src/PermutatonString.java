@@ -5,9 +5,11 @@ public class PermutatonString {
 
     public static void main(String[] args) {
 
+        PermutatonString permutatonString = new PermutatonString();
+
         String input = "abcd";
 
-        List<String> output = permute(input);
+        List<String> output = permutatonString.permute(input);
 
         for (String out: output) {
             System.out.print(out + " ");
@@ -15,14 +17,14 @@ public class PermutatonString {
 
     }
 
-    public static List<String> permute(String input) {
+    public List<String> permute(String input) {
         List<String> output = new ArrayList<>();
         permuteHelper(input,0,input.length() -1, output);
         return output;
     }
 
 
-    public static String swap(String input, int from, int to) {
+    public String swap(String input, int from, int to) {
         char[] charArray = input.toCharArray();
         char temp = charArray[from];
         charArray[from] = charArray[to];
